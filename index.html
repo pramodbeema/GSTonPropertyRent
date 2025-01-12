@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST on Property Rent - Professional Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Security Meta Tags -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com 'unsafe-inline'">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <style type="text/css">
+        * {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        :root {
+            --primary-color: #dc1a22;
+            --text-color: #2a2a2a;
+            --light-bg: #ffffff;
+            --border-color: #e5e7eb;
+            --hover-bg: #f3f4f6;
+        }
+
+        @keyframes glow {
+            0% { 
+                box-shadow: 0 0 5px var(--primary-color),
+                           0 0 5px rgba(248, 249, 250, 0.5);
+            }
+            50% { 
+                box-shadow: 0 0 20px var(--primary-color),
+                           0 0 20px rgba(248, 249, 250, 0.8);
+            }
+            100% { 
+                box-shadow: 0 0 5px var(--primary-color),
+                           0 0 5px rgba(248, 249, 250, 0.5);
+            }
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: var(--text-color);
+            min-height: 100vh;
+            position: relative;
+        }
+		        .watermark {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--primary-color);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(220, 26, 34, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+            position: relative;
+        }
+
+        .reset-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 100;
+            animation: glow 2s infinite;
+        }
+
+        .reset-btn:hover {
+            transform: translateY(-2px);
+            animation: none;
+            box-shadow: 0 4px 15px rgba(220, 26, 34, 0.3);
+        }
+
+        /* Feedback Button and Modal */
+        .feedback-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            border: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 1000;
+        }
+
+        .feedback-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(220, 26, 34, 0.3);
+        }
+		        .modal-overlay {
+            position: fixed;
+            center: 20;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+        }
+
+        .modal-content {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: var(--primary-color);
+        }
+
+        .feedback-content {
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .feedback-email {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin: 15px 0;
+            display: block;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            background-color: var(--border-color);
+            border-radius: 8px;
+            margin: 20px 0;
+            overflow: hidden;
+			display: none;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background-color: var(--primary-color);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+		        .keyboard-notice {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(42, 42, 42, 0.95);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: none;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        #questionnaire {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .question-container {
+            background: var(--light-bg);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .question-container.answered {
+            opacity: 0.8;
+        }
+
+        .question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: grid;
+            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .option-btn {
+            background: var(--light-bg);
+            border: 2px solid var(--border-color);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option-btn:hover:not(.selected):not(:disabled) {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .option-btn.selected {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+
+        .option-btn:disabled {
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+		        .result-container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin-top: 30px;
+            border-left: 5px solid var(--primary-color);
+            display: none;
+        }
+
+        .result-heading {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .result-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: var(--text-color);
+            text-align: center;
+            font-weight: 600;  /* Made bolder */
+        }
+
+        .reference-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 30px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            display: none;
+        }
+
+        .reference-table th,
+        .reference-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .reference-table th {
+            background: var(--primary-color);
+            color: white;
+            font-weight: 500;
+        }
+
+        .reference-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .reference-table tr:hover {
+            background: var(--hover-bg);
+        }
+
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 40px auto;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .question {
+                font-size: 1.1rem;
+            }
+
+            .options {
+                grid-template-columns: 1fr;
+            }
+
+            .reference-table {
+                font-size: 0.9rem;
+            }
+
+            .reference-table th,
+            .reference-table td {
+                padding: 10px;
+            }
+
+            .keyboard-notice {
+                display: none !important;
+            }
+
+            .feedback-btn {
+                position: fixed;
+                margin: 0;
+                left: 20px;
+                bottom: 20px;
+            }
+
+            .reset-btn {
+                position: relative;
+                display: block;
+                margin: 20px auto;
+                right: auto;
+                top: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="watermark">Made by Beema's Fincon</div>
+    
+    <button class="feedback-btn" onclick="showFeedbackModal()">
+        <i class="fas fa-comment"></i> Feedback
+    </button>
+
+    <div class="keyboard-notice">
+        <i class="fas fa-mouse-pointer"></i> For security purposes, please use your mouse to navigate
+    </div>
+
+    <!-- Feedback Modal -->
+    <div class="modal-overlay" id="feedbackModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Share Your Feedback</h2>
+                <button class="close-modal" onclick="closeFeedbackModal()">&times;</button>
+            </div>
+            <div class="feedback-content">
+                <p>We value your feedback! Please send your suggestions and comments to:</p>
+                <a href="mailto:bp.beema@outlook.com" class="feedback-email">bp.beema@outlook.com</a>
+                <p>Your input helps us improve our service.</p>
+                <button class="option-btn" onclick="closeFeedbackModal()">Return to Application</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>GST on Rent of Property</h1>
+            <div class="subtitle">Commercial & Residential Guidelines | Effective from October 10, 2024</div>
+            <button id="resetBtn" class="reset-btn" onclick="resetQuestionnaire()" style="display: none;">
+                Start Over
+            </button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="swipe-area">
+            <div id="questionnaire"></div>
+
+            <div id="result" class="result-container">
+                <!-- Result will be dynamically inserted here -->
+            </div>
+
+            <table id="referenceTable" class="reference-table">
+                <!-- Reference table will be dynamically inserted here -->
+            </table>
+        </div>
+    </div>
+	    <script>
+        // Security measures
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey || e.keyCode == 123) {
+                e.stopPropagation();
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        document.addEventListener('keyup', function(e) {
+            if (e.key == 'PrintScreen') {
+                navigator.clipboard.writeText('');
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Show keyboard notice only on desktop
+        if (window.innerWidth > 768) {
+            document.querySelector('.keyboard-notice').style.display = 'block';
+        }
+
+        // Feedback Modal Functions
+        function showFeedbackModal() {
+            document.getElementById('feedbackModal').style.display = 'flex';
+            document.querySelector('.container').style.filter = 'blur(5px)';
+        }
+
+        function closeFeedbackModal() {
+            document.getElementById('feedbackModal').style.display = 'none';
+            document.querySelector('.container').style.filter = 'none';
+        }
+
+        // Mobile Swipe Detection
+        let touchstartX = 0;
+        let touchendX = 0;
+
+        document.querySelector('.swipe-area').addEventListener('touchstart', e => {
+            touchstartX = e.changedTouches[0].screenX;
+        });
+
+        document.querySelector('.swipe-area').addEventListener('touchend', e => {
+            touchendX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchendX < touchstartX) {
+                // Swipe left - go forward
+            }
+            if (touchendX > touchstartX) {
+                // Swipe right - go back
+            }
+        }
+
+        // Progress Bar
+        function updateProgress(currentQuestionIndex) {
+            const totalQuestions = 8; // Total number of possible questions
+            const progress = (currentQuestionIndex / totalQuestions) * 100;
+            document.getElementById('progressBar').style.width = `${progress}%`;
+        }
+		        const questions = [
+            {
+                id: 1,
+                text: "What type of property are you dealing with?",
+                options: ["Commercial Property", "Residential Property"],
+                next: {
+                    "Commercial Property": 2,
+                    "Residential Property": 5
+                }
+            },
+            {
+                id: 2,
+                text: "Are you registered under GST? (Landlord's status)",
+                options: ["Yes, I am registered", "No, I am not registered"],
+                next: {
+                    "Yes, I am registered": 3,
+                    "No, I am not registered": 4
+                }
+            },
+            {
+                id: 3,
+                text: "Is your tenant registered under GST?",
+                options: ["Yes, tenant is registered", "No, tenant is not registered"],
+                result: {
+                    "Yes, tenant is registered": "As a registered landlord of commercial property with a registered tenant, you need to charge GST under Forward Charge Mechanism (FCM).",
+                    "No, tenant is not registered": "As a registered landlord of commercial property with an unregistered tenant, you need to charge GST under Forward Charge Mechanism (FCM)."
+                }
+            },
+            {
+                id: 4,
+                text: "Is your tenant registered under GST?",
+                options: ["Yes, tenant is registered", "No, tenant is not registered"],
+                result: {
+                    "Yes, tenant is registered": "As an unregistered landlord of commercial property with a registered tenant, the tenant needs to pay GST under Reverse Charge Mechanism (RCM).",
+                    "No, tenant is not registered": "As both landlord and tenant are unregistered, no GST is applicable on the rent."
+                }
+            },
+            {
+                id: 5,
+                text: "Are you registered under GST? (Landlord's status)",
+                options: ["Yes, I am registered", "No, I am not registered"],
+                next: {
+                    "Yes, I am registered": 6,
+                    "No, I am not registered": 7
+                }
+            },
+            {
+                id: 6,
+                text: "What is the purpose of renting?",
+                options: ["For Residential Purpose", "For Commercial Purpose"],
+                result: {
+                    "For Residential Purpose": "The rent is GST Exempted as it's for residential purpose.",
+                    "For Commercial Purpose": "As a registered landlord renting residential property for commercial purpose, you need to charge GST under Forward Charge Mechanism (FCM)."
+                }
+            },
+            {
+                id: 7,
+                text: "What is the purpose of renting?",
+                options: ["For Commercial Purpose", "For Residential Purpose"],
+                next: {
+                    "For Commercial Purpose": 8,
+					"For Residential Purpose": {
+                        result: "The rent is GST Exempted as it's for residential purpose."
+                    }
+                }
+            },
+            {
+                id: 8,
+                text: "Is your tenant registered under GST?",
+                options: ["Yes, tenant is registered", "No, tenant is not registered"],
+                result: {
+                    "Yes, tenant is registered": "The tenant needs to pay GST under Reverse Charge Mechanism (RCM).",
+                    "No, tenant is not registered": "No GST is applicable as both parties are unregistered."
+                }
+            }
+        ];
+
+        let currentQuestion = questions[0];
+        let userAnswers = [];
+
+        function showQuestion(question) {
+            const questionnaireDiv = document.getElementById('questionnaire');
+            const questionElement = document.createElement('div');
+            questionElement.className = 'question-container animate__animated animate__fadeIn';
+            questionElement.innerHTML = `
+                <div class="question">${question.text}</div>
+                <div class="options">
+                    ${question.options.map(option => `
+                        <button class="option-btn" onclick="handleAnswer('${option}')">${option}</button>
+                    `).join('')}
+                </div>
+            `;
+            questionnaireDiv.appendChild(questionElement);
+            questionElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Update progress
+            updateProgress(questions.indexOf(question));
+        }
+
+        function handleAnswer(answer) {
+            const questionContainers = document.querySelectorAll('.question-container');
+            const currentQuestionElement = questionContainers[questionContainers.length - 1];
+            
+            currentQuestionElement.classList.add('answered');
+            
+            const options = currentQuestionElement.querySelectorAll('.option-btn');
+            options.forEach(option => {
+                if (option.textContent === answer) {
+                    option.classList.add('selected');
+                }
+                option.disabled = true;
+            });
+
+            // Show reset button after first question is answered
+            document.getElementById('resetBtn').style.display = 'block';
+
+            userAnswers.push({ 
+                questionId: currentQuestion.id,
+                question: currentQuestion.text, 
+                answer: answer 
+            });
+
+            if (currentQuestion.result && currentQuestion.result[answer]) {
+                showResult(currentQuestion.result[answer]);
+            } else if (currentQuestion.next && currentQuestion.next[answer]) {
+                if (typeof currentQuestion.next[answer] === 'object') {
+                    showResult(currentQuestion.next[answer].result);
+                } else {
+                    currentQuestion = questions.find(q => q.id === currentQuestion.next[answer]);
+                    showQuestion(currentQuestion);
+                }
+            }
+        }
+
+        function showResult(result) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `
+                <div class="result-heading">Your GST Treatment</div>
+                <div class="result-text">${result}</div>
+            `;
+            
+            showReferenceTable();
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            updateProgress(8); // Complete progress bar
+        }
+
+        function showReferenceTable() {
+            const table = document.getElementById('referenceTable');
+            table.style.display = 'table';
+            table.innerHTML = `
+                <thead>
+                    <tr>
+                        <th>Property Type</th>
+                        <th>Landlord Status</th>
+                        <th>Tenant Status</th>
+                        <th>Purpose</th>
+                        <th>GST Treatment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Commercial</td>
+                        <td>Registered</td>
+                        <td>Registered</td>
+                        <td>Commercial</td>
+                        <td>Landlord charges GST (FCM)</td>
+                    </tr>
+                    <tr>
+                        <td>Commercial</td>
+                        <td>Registered</td>
+                        <td>Unregistered</td>
+                        <td>Commercial</td>
+                        <td>Landlord charges GST (FCM)</td>
+                    </tr>
+                    <tr>
+                        <td>Commercial</td>
+                        <td>Unregistered</td>
+                        <td>Registered</td>
+                        <td>Commercial</td>
+                        <td>Tenant pays GST (RCM)</td>
+                    </tr>
+                    <tr>
+                        <td>Commercial</td>
+                        <td>Unregistered</td>
+                        <td>Unregistered</td>
+                        <td>Commercial</td>
+                        <td>No GST</td>
+                    </tr>
+                    <tr>
+                        <td>Residential</td>
+                        <td>Registered</td>
+                        <td>Any</td>
+                        <td>Residential</td>
+                        <td>GST Exempt</td>
+                    </tr>
+                    <tr>
+                        <td>Residential</td>
+                        <td>Registered</td>
+                        <td>Any</td>
+                        <td>Commercial</td>
+                        <td>Landlord charges GST (FCM)</td>
+                    </tr>
+                    <tr>
+                        <td>Residential</td>
+                        <td>Unregistered</td>
+                        <td>Any</td>
+                        <td>Residential</td>
+                        <td>GST Exempt</td>
+                    </tr>
+                    <tr>
+                        <td>Residential</td>
+                        <td>Unregistered</td>
+                        <td>Registered</td>
+                        <td>Commercial</td>
+                        <td>Tenant pays GST (RCM)</td>
+                    </tr>
+                    <tr>
+                        <td>Residential</td>
+                        <td>Unregistered</td>
+                        <td>Unregistered</td>
+                        <td>Commercial</td>
+                        <td>No GST</td>
+                    </tr>
+                </tbody>
+            `;
+        }
+
+        function resetQuestionnaire() {
+            currentQuestion = questions[0];
+            userAnswers = [];
+            document.getElementById('questionnaire').innerHTML = '';
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('referenceTable').style.display = 'none';
+            document.getElementById('resetBtn').style.display = 'none';
+            document.getElementById('progressBar').style.width = '0%';
+            showQuestion(currentQuestion);
+        }
+
+        // Start the questionnaire
+        showQuestion(currentQuestion);
+    </script>
+</body>
+</html>
