@@ -1,6 +1,6 @@
 # GST on Property Rent 🚪
 
-This repository is developed by **Beema's Fincon**, an entity focused on simplifying tax-related concepts and financial literacy. It contains an interactive HTML page designed to help individuals understand Goods and Services Tax (GST) on the rent paid for property. 
+This repository is developed by **Beema's Fincon**, an entity focused on simplifying tax-related concepts and financial literacy. It contains a user-friendly GUI tool to help individuals understand Goods and Services Tax (GST) on the rent paid for property. 
 
 **Key Features:**
 
